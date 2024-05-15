@@ -1,6 +1,8 @@
-import Login from "../src/pages/Login"
+import  LoginPage from "../src/pages/LoginPage"
+import  SignupPage  from "../src/pages/SignupPage"
+
 
 
 export {
-    Login
+    LoginPage,SignupPage
 }
