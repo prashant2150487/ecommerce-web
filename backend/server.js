@@ -1,4 +1,5 @@
 const app = require("./app");
+const connectDatabase = require("./db/Database");
 
 
 
@@ -24,6 +25,16 @@ const server = app.listen(process.env.PORT, () => {
         `Server is running on http://localhost:${process.env.PORT}`
     );
 });
+
+//connect db
+connectDatabase()
+    .then(() => {
+        console.log("Database connected successfully");
+    })
+    .catch((err) => {
+        console.error("Error connecting to database:", err.message);
+        process.exit(1); // Exiting the process if database connection fails
+    });
 
 // unhandled promise rejection
 process.on("unhandledRejection", (err) => {
