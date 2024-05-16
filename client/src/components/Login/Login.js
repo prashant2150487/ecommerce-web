@@ -3,10 +3,8 @@ import { MdQuestionMark } from "react-icons/md";
 const Login = () => {
   const data = { email: "", password: "" };
   const [inputData, setInputData] = useState(data);
-  function handleData(e) {
-    setInputData({ ...inputData, [e.target.name]: e.target.value });
-    console.log(inputData);
-  }
+  const [inputpaswword, setPassword] = useState(data);
+
   function handlesubmit(e) {
     e.preventDefault();
     if (!inputData.email || !inputData.password) {
@@ -28,10 +26,10 @@ const Login = () => {
               Email Address
             </label>
             <input
-              type="Email address"
+              type="Email "
               className=" flex-1 rounded-md p-1 shadow-md outline-none border border-slate-600"
               value={inputData.name}
-              onChange={handleData}
+              onChange={(e) => setInputData(e.target.value)}
             />
           </div>
           <div className="flex flex-col ">
@@ -40,10 +38,10 @@ const Login = () => {
             </label>
             <div className="flex justify-between items-center flex-1  p-1 shadow-slate-500 ">
               <input
-                type="Email address"
+                type="password"
                 className=" flex-1 p-1  rounded-md shadow-md outline-none border border-slate-600"
-                value={inputData.password}
-                onChange={handleData}
+                value={inputpaswword.password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           </div>
