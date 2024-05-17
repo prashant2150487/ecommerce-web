@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { MdQuestionMark } from "react-icons/md";
 const Login = () => {
-  const [inputData, setInputData] = useState("");
-  const [inputpaswword, setPassword] = useState("");
+  const data = { email: "", password: "" };
+  const [inputData, setInputData] = useState(data);
+  const [inputpaswword, setPassword] = useState(data);
 
   function handlesubmit(e) {
     e.preventDefault();
-    if (!inputData.email || !inputData.password) {
+    if (!inputData || !inputPassword) {
       alert("Please fill all the fields");
     }
   }
@@ -26,7 +27,7 @@ const Login = () => {
               Email Address
             </label>
             <input
-              type="email"
+              type="Email "
               className=" flex-1 rounded-md p-1 shadow-md outline-none border border-slate-600"
               value={inputData}
               onChange={(e) => setInputData(e.target.value)}
@@ -39,8 +40,9 @@ const Login = () => {
             <div className="flex justify-between items-center flex-1  p-1 shadow-slate-500 ">
               <input
                 type="password"
+                placeholder="password"
                 className=" flex-1 p-1  rounded-md shadow-md outline-none border border-slate-600"
-                value={inputpaswword}
+                value={inputpaswword.password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
