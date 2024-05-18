@@ -21,39 +21,48 @@ const Signup = () => {
           className="bg-white  w-full p-6 mt-7 flex flex-col gap-3 rounded-md shadow-xl"
           onSubmit={handlesubmit}
         >
-          <div className="flex flex-col ">
-            <label htmlFor="email" className="text- gray text-[15px]">
+          <div className="flex flex-col gap-1 ">
+            <label
+              htmlFor="email"
+              className="text-gray-500  font-medium text-[15px] "
+            >
               Full Name
             </label>
             <input
               type="email "
               placeholder="Enter your name"
-              className=" flex-1 rounded-md p-1 shadow-md outline-none border border-slate-600"
+              className=" flex-1 rounded-md p-1 shadow-sm border border-slate-900 broder border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               value={Name}
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <div className="flex flex-col ">
-            <label htmlFor="email" className="text- gray text-[15px]">
+          <div className="flex flex-col gap-1">
+            <label
+              htmlFor="email"
+              className="text-gray-500  font-medium text-[15px]"
+            >
               Email Address
             </label>
             <input
               type="email "
               placeholder=" Enter your email"
-              className=" flex-1 rounded-md p-1 shadow-md outline-none border border-slate-600"
+              className=" flex-1 rounded-md p-1 shadow-sm border border-slate-900 broder border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               value={Email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="flex flex-col ">
-            <label htmlFor="password" className="text-gray text-[15px]">
+          <div className="flex flex-col gap-1">
+            <label
+              htmlFor="password"
+              className="text-gray-500  font-medium text-[15px]"
+            >
               Password
             </label>
             <div className="flex justify-between items-center flex-1  p-1 shadow-slate-500 ">
               <input
                 type="password"
                 placeholder=" Enter your password"
-                className=" flex-1 p-1  rounded-md shadow-md outline-none border border-slate-600"
+                className=" flex-1 rounded-md p-1 shadow-sm border border-slate-900 broder border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
