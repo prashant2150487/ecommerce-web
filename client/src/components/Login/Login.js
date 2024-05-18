@@ -16,7 +16,7 @@ const Login = () => {
           Login to your account
         </h2>
         <form
-          className="bg-white  w-full p-6 mt-7 flex flex-col gap-3 rounded-md shadow-xl "
+          className="bg-white  w-full p-6 mt-7 flex flex-col gap-3 rounded-md shadow-xl"
           onSubmit={handlesubmit}
         >
           <div className="flex flex-col ">
