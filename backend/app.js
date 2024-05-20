@@ -3,13 +3,13 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const app = express();
 const ErrorHandler = require("./utils/ErrorHandler");
-
+const cors = require("cors");
 
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors())
 app.use("/", express.static("uploads"))
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 

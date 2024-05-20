@@ -2,7 +2,6 @@ const app = require("./app");
 const connectDatabase = require("./db/Database");
 
 
-
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
     console.log(`Error: ${err.message}`);
@@ -16,10 +15,6 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
     });
 }
 
-
-
-
-
 //connect db
 connectDatabase()
     .then(() => {
@@ -31,7 +26,6 @@ connectDatabase()
     });
 
 // unhandled promise rejection
-
 
 // create server
 const server = app.listen(process.env.PORT, () => {
